@@ -12,6 +12,8 @@ cd /home/pi/Desktop
 
 git clone https://github.com/DexterInd/GrovePi.git
 
+sudo i2cdetect -y 1
+
 # Inside Grove Pi folder:
 
 cd Firmware
