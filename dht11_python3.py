@@ -19,7 +19,8 @@ while True:
                 data.write('temperature,' + 'temp='+ str(temp) + ' ' + 'hum=' +str(hum) + ' ' + str(time.strftime("%s",time.gmtime())))
                 #data.write(' ')
                 #data.write('hum=' +str(hum))
-                response = requests.post('http://35.198.129.164:8086/write?db=yeni4', data=f'temperature,temp={int(temp)} hum={hum}')
+                response = requests.post('http://35.198.129.164:8086/write?db=yeni4', data='temperature,temp={temp} hum={hum}')
+                #response = requests.post('http://35.198.129.164:8086/write?db=yeni4', data=f'temperature,temp={int(temp)} hum={hum}')
                 #print(response.status_code)
                 data.write('\n')
       #  except KeyboardInterrupt as k:
