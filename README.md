@@ -1,6 +1,6 @@
 # DHT11
 
-# Raspberry Pi 4 Temperature Humdity Sensor(DHT11) using Grove Pi+.
+# Raspberry Pi 4 Temperature and Humdity Sensor(DHT11) using Grove Pi+.
 
 # First Download Grove Pi:
 
