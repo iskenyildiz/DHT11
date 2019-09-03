@@ -10,9 +10,6 @@
 
 ```cd /home/pi/Desktop```
 
-```git clone https://github.com/DexterInd/GrovePi.git```
-
-
 
 # Inside Grove Pi folder:
 
