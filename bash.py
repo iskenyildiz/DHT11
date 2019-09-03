@@ -14,8 +14,8 @@ if temp>=25.0:
     content = 'Oda sicakligi ' + str(temp) + '*C'
     mail = smtplib.SMTP("smtp.gmail.com",587)
     mail.starttls()
-    mail.login('gozenintern@gmail.com','password')
-    mail.sendmail("gozenintern@gmail.com","muhammetkrn19@gmail.com",content)
+    mail.login('youremail@gmail.com','password')
+    mail.sendmail("youremail@gmail.com","targetmail@gmail.com",content)
 
 
 
