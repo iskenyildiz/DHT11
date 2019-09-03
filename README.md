@@ -4,21 +4,21 @@
 
 # First Download Grove Pi:
 
-curl -kL dexterindustries.com/update_grovepi | bash
+```curl -kL dexterindustries.com/update_grovepi | bash```
 
-sudo reboot
+```sudo reboot```
 
-cd /home/pi/Desktop
+```cd /home/pi/Desktop```
 
-git clone https://github.com/DexterInd/GrovePi.git
+```git clone https://github.com/DexterInd/GrovePi.git```
 
-sudo i2cdetect -y 1
+```sudo i2cdetect -y 1```
 
 # Inside Grove Pi folder:
 
-cd Firmware
+```cd Firmware```
 
-bash firmware_update.sh
+```bash firmware_update.sh```
 
 # Docker installation/config for Ubuntu 18.04 Server 
 
