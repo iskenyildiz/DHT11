@@ -51,6 +51,8 @@
 
 ```sudo docker pull influxdb```
 
+```docker run --rm influxdb:1.0 influxd config > /home/pi/influxdb.conf```
+
 ```sudo docker run -d -p 8083:8083 -p 8086:8086 -p 25826:25826/udp -v $PWD/influxdb:/var/lib/influxdb -v $PWD/influxdb.conf:/home/pi/influxdb.conf:ro influxdb:1.0 ```
 
 '-d' option makes the container run in the background.
