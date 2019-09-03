@@ -23,8 +23,11 @@
 # Docker installation/config for Ubuntu 18.04 Server 
 
 ```sudo apt-get update```
+
 ```sudo apt install docker.io```
+
 ```sudo systemctl start docker```
+
 ```sudo docker ps ```(for current working containers.)
 
 ```sudo docker ps -a``` (print all containers.)
