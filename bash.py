@@ -7,15 +7,30 @@ import time
 data=open('data.txt','w')
 [ temp,hum ] = grovepi.dht(dht_sensor_port,dht_sensor_type)
 print ('Temp: '+ str(temp) + '*C' + '\tHumidity:' + ' %'+ str(hum) + ' ' + str(time.strftime("%s",time.gmtime())))
-data.write('temperature ' + 'temp='+ str(temp))
+data.write('temperature,location=Gozen_Holding ' + 'temp='+ str(temp))
 data.write('\n')
-data.write('temperature ' + 'hum='+ str(hum))
-if temp>=25.0: 
-    content = 'Oda sicakligi ' + str(temp) + '*C'
-    mail = smtplib.SMTP("smtp.gmail.com",587)
+data.write('temperature,location=Gozen_Holding ' + 'hum='+ str(hum))
+
+def mail(content):
+    mail = smtplib.SMTP("smtp.gmail.com",587) 
     mail.starttls()
-    mail.login('youremail@gmail.com','password')
-    mail.sendmail("youremail@gmail.com","targetmail@gmail.com",content)
+    mail.login('yourmail@gmail.com','password')
+    mail.sendmail("yourmail@gmail.com","targetmail@gmail.com",content)
+
+
+if temp>=25.0: 
+    content = 'Oda sicakligi ' + str(temp) + '*C' + ' Sicaklik yuksek!'
+    mail(content)
+elif temp<=15:
+    content = 'Oda sicakligi ' + str(temp) + '*C' + ' Sicakligi artirmaniz onerilir.'
+    mail(content)
+elif hum >=35:
+    content = 'Odadaki nem orani  %' +  str(hum)  + ' Nem orani cok yuksek!'
+    mail(content)
+elif hum <=15:
+    content = 'Odadaki nem orani  %' +  str(hum)  + ' Nem orani cok dusuk!'
+    mail(content)
+
 
 
 
