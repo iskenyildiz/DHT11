@@ -12,13 +12,27 @@
 
 ```git clone https://github.com/DexterInd/GrovePi.git```
 
-```sudo i2cdetect -y 1```
+
 
 # Inside Grove Pi folder:
 
 ```cd Firmware```
 
 ```bash firmware_update.sh```
+
+```sudo i2cdetect -y 1```
+
+(you need to see 04 here)
+```
+    0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
+00:          -- 04 -- -- -- -- -- -- -- -- -- -- -- 
+10: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+20: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+30: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+40: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+50: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+60: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+70: -- -- -- -- -- -- -- -- ```
 
 # Docker installation/config for Ubuntu 18.04 Server 
 
