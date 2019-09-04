@@ -44,7 +44,7 @@
 
 ```sudo docker ps -a``` (print all containers.)
 
-# InfluxDB container
+# InfluxDB container with specific version
 
 ```sudo docker pull influxdb:1.0```
 
