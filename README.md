@@ -46,7 +46,7 @@
 
 # InfluxDB container
 
-```sudo docker pull influxdb```
+```sudo docker pull influxdb:1.0```
 
 ```docker run --rm influxdb:1.0 influxd config > /home/pi/influxdb.conf```
 
