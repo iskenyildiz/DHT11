@@ -57,6 +57,7 @@
 to stop the container:
 
 ```docker stop 'container ID' ```
+(first 3-4 digits of the ID should be sufficient.)
 
 ``` curl -i -XPOST 'http://35.198.129.164:8086/write?db=mydb' --data-binary @data.txt ```
 
