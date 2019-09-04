@@ -60,7 +60,9 @@ for some cases remove :ro
 
 ```sudo docker run -d -p 8083:8083 -p 8086:8086 -p influxdb ```
 
+Running without '-d':
 
+[![photo6014972578902421475.jpg](https://i.postimg.cc/BvNJDmSz/photo6014972578902421475.jpg)](https://postimg.cc/JyDwCcB3)
 
 
 '-d' option makes the container run in the background.
@@ -103,7 +105,14 @@ You can give execute access with chmod +x bash.py
 
 Run the file ./bash.sh, check database for sent data and grafana graph.
 
-![Screenshot](/home/isken/Pictures/grafana.png)
+InfluxDB after the execution of raspi file:
+
+[![photo6014972578902421476.jpg](https://i.postimg.cc/ZRGYKCKY/photo6014972578902421476.jpg)](https://postimg.cc/k6yPTMbL)
+
+
+Grafana after the execution:
+
+[![grafana.png](https://i.postimg.cc/cCRYBqvW/grafana.png)](https://postimg.cc/gL0nGTyt)
 
 # Notes for myself
 
