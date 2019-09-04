@@ -8,7 +8,7 @@ import requests
 
 
 ip_request = requests.get('https://get.geojs.io/v1/ip.json')
-my_ip = ip_request.json()['ip']  # ip_request.json() => {ip: 'XXX.XXX.XX.X'}
+my_ip = ip_request.json()['ip']  
 #print(my_ip)
 
 
