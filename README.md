@@ -103,6 +103,8 @@ You can give execute access with chmod +x bash.py
 
 Run the file ./bash.sh, check database for sent data and grafana graph.
 
+![Screenshot](/home/isken/Pictures/grafana.png)
+
 # Notes for myself
 
 Influxdb database schema consists of:
