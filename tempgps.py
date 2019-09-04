@@ -17,13 +17,14 @@ geo_request = requests.get(geo_request_url)
 geo_data = geo_request.json()
 
 org=geo_data["organization"] 
+neworg=org.replace(" ", "_")
 print(org)
 data=open('data.txt','w')
 [ temp,hum ] = grovepi.dht(dht_sensor_port,dht_sensor_type)
 print ('Temp: '+ str(temp) + '*C' + '\tHumidity:' + ' %'+ str(hum) + ' ' + str(time.strftime("%s",time.gmtime())))
-data.write('temperature,location=' + org + ' temp='+ str(temp))
+data.write('temperature,location=' + neworg + ' temp='+ str(temp))
 data.write('\n')
-data.write('temperature,location=Gozen_Holding ' + 'hum='+ str(hum))
+data.write('temperature,location=' + neworg + ' hum='+ str(hum))
 
 def mail(content):
     mail = smtplib.SMTP("smtp.gmail.com",587) 
