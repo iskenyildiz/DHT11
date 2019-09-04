@@ -105,7 +105,11 @@ Run the file ./bash.sh, check database for sent data and grafana graph.
 
 # Notes for myself
 
-Influxdb database schema consists of <measurement>,<tag-key><tag-value> <field-key><field-value> unix-timestamp
+Influxdb database schema consists of:
+
++-----------+--------+-+---------+-+---------+
+|measurement|,tag_set| |field_set| |timestamp|
++-----------+--------+-+---------+-+---------+
 
 If the data is seperated with ',' instead of space it follows the measurement and tagkey format, make sure you fill them carefully. 
 
