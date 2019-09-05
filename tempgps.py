@@ -26,7 +26,7 @@ geo_request_url = 'https://get.geojs.io/v1/ip/geo/' + my_ip + '.json'
 geo_request = requests.get(geo_request_url)
 geo_data = geo_request.json()
 
-geojs_data=geo_data["organization"] # we store the geojs data in a variable called geojs_data.
+geojs_data=geo_data["organization"] # We store the geojs data in a variable called geojs_data.
 
 # instead of organization you can use either of below whichever you need for that instance.
 # "area_code"
