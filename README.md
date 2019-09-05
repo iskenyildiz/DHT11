@@ -32,6 +32,8 @@ We are now good to go. Go into your raspi screen and start the configuration.
 
 ```bash firmware_update.sh```
 
+Firmware update is necessary for raspi to see the grovepi connection.
+
 ```sudo i2cdetect -y 1```
 
 (you need to see 04 here)
@@ -63,9 +65,11 @@ We are now good to go. Go into your raspi screen and start the configuration.
 
 ```sudo docker pull influxdb:1.0```
 
-```docker run --rm influxdb:1.0 influxd config > /home/pi/influxdb.conf```
+```docker run --rm influxdb:1.0 influxd config > influxdb.conf```
 
 ```sudo docker run -d -p 8083:8083 -p 8086:8086 -p 25826:25826/udp -v $PWD/influxdb:/var/lib/influxdb -v $PWD/influxdb.conf:/home/pi/influxdb.conf:ro influxdb:1.0 ```
+
+This runs influxDB with Admin and HTTP API ports attached to it. /var/lib/influxdb is for storing the data, the other is for the conf files.)
 
 for some cases remove :ro
 
@@ -96,7 +100,7 @@ to stop the container:
 
 ```docker pull grafana/grafana```
 
-```docker run -d --name=grafana -p 3000:3000 grafana/grafana ```
+```docker run -d --name=grafana -p 3000:3000 grafana/grafana ```(run grafana with port 3000 attached to it.)
 
 (--name is optional, can run into problems if you stop and restart the container. Suggested to not include.)
 
@@ -116,9 +120,15 @@ Make sure bash.sh has execute priviledge you can check this using:
 
 ```ls -l bash.sh```
 
-You can give execute access with chmod +x bash.py
+You can give execute access with
 
-Run the file ./bash.sh, check database for sent data and grafana graph.
+```chmod +x bash.py ```
+
+Run the file 
+
+```./bash.sh ```
+
+check database for sent data and grafana graph.
 
 InfluxDB after the execution of raspi file:
 
