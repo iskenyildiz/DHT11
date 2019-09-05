@@ -72,7 +72,7 @@ Firmware update is necessary for raspi to see the grovepi connection.
 
 ```sudo docker run -d -p 8083:8083 -p 8086:8086 -p 25826:25826/udp -v $PWD/influxdb:/var/lib/influxdb -v $PWD/influxdb.conf:/home/pi/influxdb.conf:ro influxdb:1.0 ```
 
-This runs influxDB with Admin and HTTP API ports attached to it. /var/lib/influxdb is for storing the data, the other is for the conf files.)
+This runs influxDB with Admin and HTTP API ports attached to it. (/var/lib/influxdb is for storing the data, the other is for the conf files.)
 
 for some cases remove :ro
 
