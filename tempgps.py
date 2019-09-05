@@ -55,7 +55,7 @@ data.write('temperature,location=' + underscored_geojs_data + ' temp='+ str(temp
 data.write('\n')
 data.write('temperature,location=' + underscored_geojs_data + ' hum='+ str(hum))
 
-# Sending the mails an email.
+# Sending the mails to an email account.
 def mail(content): # Content is defined in the if statements below, which is the message to be sent in the email.
     mail = smtplib.SMTP("smtp.gmail.com",587) 
     mail.starttls()
