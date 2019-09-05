@@ -1,10 +1,13 @@
 import grovepi
 import time
 import smtplib
-dht_sensor_port=4 # DHT11 uses digital ports connected to I2C ports so change this for your preference. (We used D4 port.)
-dht_sensor_type=0 # 0 for DHT11, 1 for DHT22
 import time
 import requests
+
+
+dht_sensor_port=4 # DHT11 uses digital ports connected to I2C ports so change this for your preference. (We used D4 port.)
+dht_sensor_type=0 # 0 for DHT11, 1 for DHT22
+
 
 temp_high_alert=25.0 # Change this depending on how hot or cold the room you think should be for the program to send email alerts.
 hum_high_alert=35  # Change this depending on how hot or cold the room you think should be for the program to send email alerts.
