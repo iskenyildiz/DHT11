@@ -67,7 +67,7 @@ if temp>=temp_high_alert:
     content = 'Room temperature ' + str(temp) + '*C' + ', Temperature is too high!'
     mail(content)
 elif temp<=temp_low_alert:
-    content = 'Room temperature ' + str(temp) + '*C' + ', You are advised to increase the temperature.'
+    content = 'Room temperature ' + str(temp) + '*C' + ', It is  advised to increase the temperature.'
     mail(content)
 elif hum >=hum_high_alert:
     content = 'Humidity inside the room  %' +  str(hum)  + ', Humidity is too high!'
