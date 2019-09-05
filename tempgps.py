@@ -8,7 +8,7 @@ import requests
 
 temp_high_alert=25.0 # Change this depending on how hot or cold the room you think should be for the program to send email alerts.
 hum_high_alert=35  # Change this depending on how hot or cold the room you think should be for the program to send email alerts.
-temp_low_alert=15  # Change this depending on how hot or cold the room you think should be for the program to send email alerts.
+temp_low_alert=15.0  # Change this depending on how hot or cold the room you think should be for the program to send email alerts.
 hum_low_alert=15  # Change this depending on how hot or cold the room you think should be for the program to send email alerts.
 
 source_mail_address='yourmail@gmail.com' # Your mail address that you will be sending the mail from.
