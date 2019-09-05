@@ -13,7 +13,7 @@ hum_low_alert=15  # Change this depending on how hot or cold the room you think 
 
 source_mail_address='yourmail@gmail.com' # Your mail address that you will be sending the mail from.
 target_mail_address='targetmail@gmail.com' # Destination mail address.
-source_mail_password='passwd' # password of your mail address for logging in.
+source_mail_password='passwd' # Password of your mail address for logging in.
 
 
 # This is taken from https://www.freecodecamp.org/forum/t/make-a-script-read-gps-geolocation/241607/2
@@ -28,7 +28,7 @@ geo_data = geo_request.json()
 
 geojs_data=geo_data["organization"] # We store the geojs data in a variable called geojs_data.
 
-# instead of organization you can use either of below whichever you need for that instance.
+# Instead of organization you can use either of below whichever you need for that instance.
 # "area_code"
 # "continent_code"
 # "country"
@@ -40,7 +40,7 @@ geojs_data=geo_data["organization"] # We store the geojs data in a variable call
 # "organization"
 # "timezone"
 
-underscored_geojs_data=geojs_data.replace(" ", "_") # since InfluxDB line protocol doesn't support spaces other than the space between tag value and field value we put underscores for the spaces found in tag value.
+underscored_geojs_data=geojs_data.replace(" ", "_") # Since InfluxDB line protocol doesn't support spaces other than the space between tag value and field value we put underscores for the spaces found in tag value.
 
 
 data=open('data.txt','w') # This is the file we create that will be sent to the influxDB database for storage. We will fill this with information below.
@@ -53,11 +53,11 @@ data.write('\n')
 data.write('temperature,location=' + underscored_geojs_data + ' hum='+ str(hum))
 
 # Sending the mails an email.
-def mail(content): # content is defined in the if statements below, which is the message to be sent in the email.
+def mail(content): # Content is defined in the if statements below, which is the message to be sent in the email.
     mail = smtplib.SMTP("smtp.gmail.com",587) 
     mail.starttls()
-    mail.login(source_mail_address,source_mail_password) # enter your mail for mails to be sent.
-    mail.sendmail(source_mail_address,target_mail_address,content) # enters the source address, target address and content to be sent for the sendmail function to work. Content is defined lower
+    mail.login(source_mail_address,source_mail_password) # Enters your mail for mails to be sent.
+    mail.sendmail(source_mail_address,target_mail_address,content) # #nters the source address, target address and content to be sent for the sendmail function to work. Content is defined lower
 
 # Send mail depending on the room temperature and humidity.
 if temp>=temp_high_alert: 
