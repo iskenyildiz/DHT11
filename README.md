@@ -2,6 +2,21 @@
 
 # Raspberry Pi 4 Temperature and Humdity Sensor(DHT11) using Grove Pi+.
 
+In this project, we are using Grove Pi with our RasPi to sensor the tempereture and humidity of the room we are in, store that data in a database using InfluxDB and monitor it with Grafana.
+# Prequisites
+
+- Raspberry Pi 4
+
+- Grove Pi board
+
+- DHT11 sensor module
+
+First connect raspi into the board.
+
+Then connect the module to the boards D4 port.( for this project.)
+
+We are now good to go. Go into your raspi screen and start the configuration.
+
 # First Download Grove Pi:
 
 ```curl -kL dexterindustries.com/update_grovepi | bash```
