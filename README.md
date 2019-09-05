@@ -149,9 +149,15 @@ Influxdb database schema consists of:
 +-----------+--------+-+---------+-+---------+
 ```
 
-If the data is seperated with ',' instead of space it follows the measurement and tagkey format, make sure you fill them carefully. 
+- If the data is seperated with ',' instead of space it follows the measurement and tagkey format, make sure you fill them carefully. 
 
-Field key is the data you want to send. Seperate it with a space. Timestamp is optional if left empty it will fill with system time.
+- Field key is the data you want to send. Seperate it with a space. Timestamp is optional if left empty it will fill with system time.
+
+- Make sure you have the correct containers running in the background.
+
+- Ports are important, check their availability.
+
+- Docker-compose runs influxdb:1.0, there are issues with latest version.
 
 
 
