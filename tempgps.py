@@ -56,8 +56,8 @@ data.write('temperature,location=' + underscored_geojs_data + ' hum='+ str(hum))
 def mail(content): # content is defined in the if statements below, which is the message to be sent in the email.
     mail = smtplib.SMTP("smtp.gmail.com",587) 
     mail.starttls()
-    mail.login(source_mail_address,source_mail_password)
-    mail.sendmail(source_mail_address,target_mail_address,content)
+    mail.login(source_mail_address,source_mail_password) # enter your mail for mails to be sent.
+    mail.sendmail(source_mail_address,target_mail_address,content) # enters the source address, target address and content to be sent for the sendmail function to work. Content is defined lower
 
 # Send mail depending on the room temperature and humidity.
 if temp>=temp_high_alert: 
