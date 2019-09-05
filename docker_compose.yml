@@ -1,7 +1,8 @@
 ---
-#services:
+version: '2'
+services:
   influxdb:
-    image: influxdb:latest
+    image: influxdb:1.0
     container_name: influxdb
     ports:
       - '8086:8086'
@@ -26,6 +27,6 @@
       - GF_SECURITY_ADMIN_PASSWORD=admin
    # restart:
      # always
- # volumes:
- #   influxdb-storage:
- #   grafana-storage:
+volumes:
+  influxdb-storage:
+  grafana-storage:
