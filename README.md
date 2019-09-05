@@ -159,6 +159,6 @@ Influxdb database schema consists of:
 
 - Docker-compose runs influxdb:1.0, there are issues with latest version.
 
-
+- Run docker-compose up -d in the same directory as docker-compose.yml file or it won't work
 
 
