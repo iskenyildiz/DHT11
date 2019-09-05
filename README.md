@@ -77,7 +77,7 @@ to stop the container:
 (sends the data through the InfluxDB API.)
 
 
-# GRAFANA
+# Grafana
 
 ```docker pull grafana/grafana```
 
