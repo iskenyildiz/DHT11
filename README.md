@@ -4,6 +4,10 @@
 
 In this project, we are using Grove Pi with our RasPi to sensor the tempereture and humidity of the room we are in, store that data in a database using InfluxDB and monitor it with Grafana.
 
+The system we are going to build:
+
+[![raspisema-768x1024.jpg](https://i.postimg.cc/sX98j9Tz/raspisema-768x1024.jpg)](https://postimg.cc/tZJDDP0v)
+
 [![LED-blink-connected.jpg](https://i.postimg.cc/ZKRdCWxJ/LED-blink-connected.jpg)](https://postimg.cc/ThzwsYss)
 
 # Prequisites
